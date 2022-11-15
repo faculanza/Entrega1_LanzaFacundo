@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Agregar producto</h2>
+<form method="post" name="form1" action=""> {% csrf_token %}
+<p>Producto <input name="producto" size="50" maxlength="50" type="text"></p>
+<p>Precio <input name="precio" size="10" maxlength="10" type="text"></p>
+<p>Fábrica <select name="idfabrica">
+    <option value="0">Seleccione fábrica</option>
+    {% for fab in fabricas %}
+    <option value="{{fab.id}}">{{fab.fabrica}}</option>
+    {% endfor%}
+</select></p>
+<p>Categoría <select name="idcategoria">
+    <option value="0">Seleccione categoría</option>
+    {% for cat in categorias %}
+    <option value="{{cat.id}}">{{cat.categoria}}</option>
+    {% endfor%}
+</select></p>
+
+<p><input type="submit" value="Agregar"></p>
+</form>
+{% endblock %}

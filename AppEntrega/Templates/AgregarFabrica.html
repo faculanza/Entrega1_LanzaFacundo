@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Agregar fábrica</h2>
+<form method="post" name="form1" action=""> {% csrf_token %}
+<p>Nombre de la fábrica <input name="fabrica" size="50" maxlength="50" type="text"></p>
+<p><input type="submit" value="Agregar"></p>
+</form>
+{% endblock %}

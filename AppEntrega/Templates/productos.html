@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Listado de Productos</h2>
+<table>
+    <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Fábrica</th>
+        <th>Categoría</th>
+    </tr>
+    {% for prod in productos %}
+    <tr>
+        <td>{{prod.producto}}</td>
+        <td>{{prod.precio}}</td>
+        <td>fabrica</td>
+        <td>categoria</td>
+        <!-- <td>{{prod.fabrica}}</td>
+        <td>{{prod.categoria}}</td> -->
+    </tr>
+    {% endfor%}
+</table>
+
+<p><a class="button" href="{% url 'AgregarProducto' %}">Agregar nuevo producto</a> <a class="button" href="{% url 'buscarproducto' %}">Buscar producto</a></p>
+
+{% endblock %}

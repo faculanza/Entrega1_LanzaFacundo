@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Agregar categoría</h2>
+<form method="post" name="form1" action=""> {% csrf_token %}
+<p>Nombre de la categoría <input name="categoria" size="50" maxlength="50" type="text"></p>
+<!-- {{ miFormulario.as_table }} -->
+<p><input type="submit" value="Agregar"></p>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Listado de Fábricas</h2>
+
+{% for fab in fabricas %}
+<li>{{fab.fabrica}}</li>
+{% endfor%}
+        
+<br/>      
+
+<p><a class="button" href="{% url 'AgregarFabrica' %}">Agregar nueva fábrica</a></p>
+
+{% endblock %}

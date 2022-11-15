@@ -1,0 +1,8 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<form method="post" name="form1" action="/AppEntrega/resultado_producto/"> {% csrf_token %}
+<p>Producto a buscar <input name="producto" size="50" maxlength="50" type="text"></p>
+<p><input type="submit" value="Buscar"></p>
+</form>
+{% endblock %}

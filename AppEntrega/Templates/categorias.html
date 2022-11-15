@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Listado de Categorías</h2>
+<ul>
+    {% for cat in categorias %}
+    <li>{{cat.categoria}}</li>
+    {% endfor%}
+</ul>
+
+<p><a class="button" href="{% url 'AgregarCategoria' %}">Agregar nueva categoria</a></p>
+
+{% endblock %}
